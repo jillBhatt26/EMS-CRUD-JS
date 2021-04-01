@@ -1,0 +1,10 @@
+# NODE MODULES
+
+# web
+web/node_modules
+
+# server
+server/node_modules
+
+# DOTENV
+server/.env
