@@ -35,6 +35,11 @@ app.use(express.urlencoded({ extended: false }));
 // define dsn URI
 const dbURI = `mongodb+srv://jillbhatt:${process.env.ATLAS_PASSWORD}@practice.tdza6.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
+// welcome route on heroku
+app.get('/', (req, res) => {
+    res.send('Welcome to MERN Employee Management System');
+});
+
 // connect to the db on URI
 mongoose
     .connect(dbURI, {
